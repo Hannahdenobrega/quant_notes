@@ -1,0 +1,72 @@
+---
+title: "Generalized option pricing"
+author: "Hannah de Nobrega"
+date: "2023-08-15"
+categories: [Black-Scholes, Option Pricing, R] 
+---
+
+
+
+### Martingale’s
+
+Finance probability theory: a martingale is a stochastic process that represents the expected value of the future payoff, ceteris paribus, and is equal to the current value of the process.  i.e. a martingale represents a process in which there is no inherent bias or predictability in the future outcomes. 
+
+A discrete-time process $X_t$  is a martingale if, for all t, it satisfies the property:
+
+$$
+E[X_{t+1}|X_1, X_1,...,X_t] = X_t
+$$
+
+This property essentially says that the expected value of the next time step’s value, ceteris paribus, is equal to the current value.
+
+### Application to Option Pricing
+
+Option pricing is a crucial field in finance, and martingales play a fundamental role in its theoretical foundation. One of the most famous models that uses Martingales for option pricing is the Black-Sholes model. In the BS model, a financial derivative like a European call option can be priced using a risk-neutral valuation approach. This approach assumes that there is a risk-neutral probability measure under which the expected return on the underlying asset is the risk-free rate. This is where the Martingale concept features because, regardless of the future price movements of the underlying asset, the portfolio’s value will follow a [fair-game](https://www.notion.so/Fair-Game-a43ba580ed92409d955587c8cb9d973c?pvs=21) pattern with no predictable bias; ensuring that there are no arbitrage opportunities, and the option can be priced consistently.  As such we can construct a portfolio of underlying assets and options in such a way that its’ value evolves as a martingale. 
+
+### Mathematical illustration
+
+Consider a European call option on a non-dividend-paying stock. The stock price follows the geometric Brownian motion:
+
+$$
+dS = \mu dt + \sigma S dW
+$$
+
+where: 
+
+$S$  = stock price
+
+$\mu$ = drift (expected return) of the stock
+
+$\sigma$ = volatility of the stock
+
+$dW$= Wiener process (Brownian motion)
+
+The option price C can be derived as a combination of the risk-free bond and the underlying stock, such that the portfolio follows a martingale process. This leads to the BS formula:
+
+$$
+c = SN(d1) - Ke - rTN(d2) \\
+$$
+
+$$
+C = Se^{-q^t}N(d_1) - Ke^{-r^t}N(d_2)\\
+$$
+
+$$
+P = Ke^{-r^t}N(-d_2)- Se^{-q^t}N(-d_1)
+$$
+
+Where:
+
+$K$ = strike price of the option
+
+$r$ = risk-free rate
+
+$T$ = time to expiration
+
+with a standard normal cumulative distribution function
+
+This formula demonstrates the use of Martingale in option pricing, as it ensures the option price is consistent with a fair game where there are no predictable biases in future outcomes.
+
+### Summary
+
+Martingales are a powerful concept in finance that ensures fair pricing and the absence of arbitrage opportunities. In option pricing, Martingales are used to create risk-neutral portfolios that follow unbiased, fair-game patterns, leading to the development of models like the BS model for pricing derivatives.

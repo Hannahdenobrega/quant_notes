@@ -1,0 +1,55 @@
+---
+title: "Generalized option pricing"
+author: "Hannah de Nobrega"
+date: "2023-08-14"
+categories: [Black-Scholes, Option Pricing, R] 
+---
+
+## A general formula for option pricing
+
+The Black-Scholes formula for option pricing is derived by asserting assumptions related to geometric Brownian motion dynamics, which do not correspond to how assets behave in reality. 
+
+Firstly, is there a general option pricing formula that is generalized enough to relax the assumptions such that the dynamics of the underlying assets follow under any type of dynamic?
+
+Secondly, will it have certain similarities with the Black-Scholes formula?
+
+Under the absence of arbitrage, it is possible to obtain a completely general formula that gives the price, $C_{t,T,K}$, of a call option with the stochastic risk-free rate ($r_s$) and for any possible dynamics for the underlying asset (Geman et al. 1995, Klenbaner 2005, and Bjork 2019):
+
+
+\begin{aligned}
+C(t,T,K) &= S_t \mathbb{Q}_S [S_T > K | \digamma_t] - KP(t,T)\mathbb{Q}_T[S_T > K | \digamma_t] \\
+
+\frac{d \digamma{Q}_T}{d \digamma{Q}} &= \frac{S_T}{S_0 e^{\int_{0}^{T}r_s d_S}} \\
+
+\frac{d \digamma{Q}_T}{d \digamma{Q}} &= \frac{1}{P(0,T) e^{\int_{0}^{T}r_s d_S}} 
+\end{aligned}
+
+
+### Similarities to Black-Scholes
+
+- the price of a call option will always be the difference of two terms
+    - the first contains the product of the current price of the underlying ($S_t$) by the conditional probability under a certain measure of probability ($\mathbb{Q}_S$) that the option ends in the money
+    - the second shows the product of the strike price ($K$) by the current price of a zero coupon bond with the same maturity as the option, $P(t,T)$, and by the conditional probability, under another measure $\mathbb{Q}_T$, that the option ends in the money.
+
+All these terms appear in the Black-Scholes formula, and the only difference lies in the concrete expression of the probabilities.
+
+### Differences from Black-Scholes
+
+- the only difference lies in the concrete expression of the probabilities
+- The probability measure $\mathbb{Q}_S$ has the underlying numeraire
+- $\mathbb{Q}_T$ is the T-forward measure, which has a zero coupon bond with maturity T as numeraire
+- both measures are determined by their Radon-Nikodym derivatives that appear under the expression of the call price
+
+## Conclusion
+
+Thus, if one has a stochastic model for the dynamics of any underlying asset, one only has to be able to calculate the previous probabilities to obtain the price of a call option written on that underlying asset.
+
+## References:
+
+Bjork. 2109. “Arbitrage Theory in Continuous Time”. Oxford University Press
+
+Geman, El Kaorui and Rochet. 1995. “Changes of probability measure and option pricing”. Journal of applied probability, 32(2), 443-458
+
+Klebaner. 2005. Introduction to stochastic calculus with applications” Imperial college press
+
+

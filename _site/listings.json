@@ -1,0 +1,16 @@
+[
+  {
+    "listing": "/tools.html",
+    "items": [
+      "/tools/mt5_api.html"
+    ]
+  },
+  {
+    "listing": "/notes.html",
+    "items": [
+      "/notes/path_shadowing_mc.html",
+      "/notes/option_pricing_martingale.html",
+      "/notes/generalized_option_pricing.html"
+    ]
+  }
+]

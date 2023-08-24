@@ -1,0 +1,10 @@
+---
+title: " Use MT5 Python API to get Financial Data"
+author: "Hannah de Nobrega"
+date: "2023-08-24"
+categories: [Black-Scholes, Option Pricing, R] 
+---
+
+## YES 
+
+

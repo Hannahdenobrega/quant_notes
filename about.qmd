@@ -1,0 +1,7 @@
+---
+title: "Biography"
+---
+
+My main area of research focus is developing systematic investment solutions in the factor portfolio space. This includes developing portfolio strategies that map factor information into investable solutions - enabling clients to best harvest factor risk premiums in their own portfolios. I am also a Financial Econometrician. I am reading towards a Phd in quantitative finance, and have a Master’s degree in Economics (focus area: financial econometrics) and Honours in Mathematical Economics. I have two years working experience in macroeconometrics, time-series statistics and quantitative finance.
+
+I am a R user and developer with substantial expertise establishing and maintaining automated coding infrastructure and quantitative investment methods, particularly in the field of factor (smart-beta) investments. I've also worked with Latex and R to design bespoke automatic reporting systems, as well as building and maintaining interactive HTML dashboards.
