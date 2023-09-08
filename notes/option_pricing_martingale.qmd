@@ -1,11 +1,9 @@
 ---
-title: "Generalized option pricing"
+title: "Martingales in option pricing"
 author: "Hannah de Nobrega"
 date: "2023-08-15"
 categories: [Black-Scholes, Option Pricing, R] 
 ---
-
-
 
 ### Martingale’s
 

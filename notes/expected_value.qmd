@@ -1,0 +1,8 @@
+---
+title: "Expected value theory"
+author: "Hannah de Nobrega"
+date: "2023-08-28"
+categories: [Expected value] 
+---
+
+![](../imgs/expected_val.png)

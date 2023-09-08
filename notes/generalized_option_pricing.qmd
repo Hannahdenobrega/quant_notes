@@ -5,6 +5,8 @@ date: "2023-08-14"
 categories: [Black-Scholes, Option Pricing, R] 
 ---
 
+![](../imgs/options.png)
+
 ## A general formula for option pricing
 
 The Black-Scholes formula for option pricing is derived by asserting assumptions related to geometric Brownian motion dynamics, which do not correspond to how assets behave in reality. 

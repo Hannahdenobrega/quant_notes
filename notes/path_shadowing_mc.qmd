@@ -4,6 +4,7 @@ author: "Hannah de Nobrega"
 date: "2023-08-16"
 categories: [Monte-Carlo, R] 
 ---
+![](../imgs/path_shadowing.png)
 
 Faithful models of financial time series are notoriously hard to construct. They must account for a series of “stylized facts” that are highly relevant for risk control and option pricing: fat tails, long memory volatility fluctuations, asymmetries both in returns (past negative returns increase future vol) and in time (past trends, of arbitrary sign, increase vol), etc.
 

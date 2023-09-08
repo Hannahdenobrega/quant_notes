@@ -71,9 +71,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -143,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Black-Scholes">Black-Scholes <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Monte-Carlo">Monte-Carlo <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Option Pricing">Option Pricing <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(3)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Black-Scholes">Black-Scholes <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Dutch Auction">Dutch Auction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Expected value">Expected value <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Market Risk Analysis Vol III">Market Risk Analysis Vol III <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Monte-Carlo">Monte-Carlo <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Option Pricing">Option Pricing <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -168,21 +168,100 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Monte-Carlo,R" data-listing-date-sort="1692136800000" data-listing-file-modified-sort="1692859187025" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./notes/path_shadowing_mc.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Dutch Auction" data-listing-date-sort="1693173600000" data-listing-file-modified-sort="1694063182167" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./notes/dutch_action.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="imgs\dutch_auct.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Auction theory
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Dutch Auction'); return false;">
+Dutch Auction
 </div>
-<div class="body">
-<a href="./notes/path_shadowing_mc.html">
-<h3 class="no-anchor listing-title">
-Path shadowing Monte-Carlo
-</h3>
-<div class="listing-subtitle">
-
+</div>
+<div class="card-text listing-description">
+In a Dutch auction, an item is offered…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Hannah de Nobrega
+</div>
+<div class="listing-date">
+Aug 28, 2023
+</div>
+</div>
+</div>
 </div>
 </a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Expected value" data-listing-date-sort="1693173600000" data-listing-file-modified-sort="1693589619730" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./notes/expected_value.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="imgs\expected_val.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Expected value theory
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Expected value'); return false;">
+Expected value
+</div>
+</div>
+<div class="card-text listing-description">
+
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Hannah de Nobrega
+</div>
+<div class="listing-date">
+Aug 28, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Market Risk Analysis Vol III" data-listing-date-sort="1692914400000" data-listing-file-modified-sort="1693589612614" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./notes/Bonds.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="imgs\bonds.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Bonds and swaps
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Market Risk Analysis Vol III'); return false;">
+Market Risk Analysis Vol III
+</div>
+</div>
+<div class="card-text listing-description">
+Plotting the yields of bonds along the maturity term structure will give the yield curve. It is very important that only bonds from the same class of issuer or with the same…<span class="citation" data-cites="choudhry2019analysing"></span>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Hannah de Nobrega
+</div>
+<div class="listing-date">
+Aug 25, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="Monte-Carlo,R" data-listing-date-sort="1692136800000" data-listing-file-modified-sort="1693589615285" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./notes/path_shadowing_mc.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="imgs\path_shadowing.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Path shadowing Monte-Carlo
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Monte-Carlo'); return false;">
 Monte-Carlo
@@ -191,36 +270,29 @@ Monte-Carlo
 R
 </div>
 </div>
-<a href="./notes/path_shadowing_mc.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 Faithful models of financial time series are notoriously hard to construct. They must account for a series of “stylized facts” that are highly relevant for risk control and…
 </div>
-</a>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Hannah de Nobrega
 </div>
-<div class="metadata">
-<a href="./notes/path_shadowing_mc.html">
 <div class="listing-date">
 Aug 16, 2023
 </div>
-<div class="listing-author">
-Hannah de Nobrega
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Black-Scholes,Option Pricing,R" data-listing-date-sort="1692050400000" data-listing-file-modified-sort="1692859183021" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./notes/option_pricing_martingale.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./notes/option_pricing_martingale.html">
-<h3 class="no-anchor listing-title">
-Generalized option pricing
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+<div class="g-col-1" data-index="4" data-categories="Black-Scholes,Option Pricing,R" data-listing-date-sort="1692050400000" data-listing-file-modified-sort="1693590744418" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./notes/option_pricing_martingale.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Martingales in option pricing
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Black-Scholes'); return false;">
 Black-Scholes
@@ -232,36 +304,29 @@ Option Pricing
 R
 </div>
 </div>
-<a href="./notes/option_pricing_martingale.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 Finance probability theory: a martingale is a stochastic process that represents the expected value of the future payoff…
 </div>
-</a>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Hannah de Nobrega
 </div>
-<div class="metadata">
-<a href="./notes/option_pricing_martingale.html">
 <div class="listing-date">
 Aug 15, 2023
 </div>
-<div class="listing-author">
-Hannah de Nobrega
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Black-Scholes,Option Pricing,R" data-listing-date-sort="1691964000000" data-listing-file-modified-sort="1692859190755" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./notes/generalized_option_pricing.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./notes/generalized_option_pricing.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="5" data-categories="Black-Scholes,Option Pricing,R" data-listing-date-sort="1691964000000" data-listing-file-modified-sort="1693590712011" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./notes/generalized_option_pricing.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="imgs\options.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Generalized option pricing
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Black-Scholes'); return false;">
 Black-Scholes
@@ -273,22 +338,20 @@ Option Pricing
 R
 </div>
 </div>
-<a href="./notes/generalized_option_pricing.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 The…
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./notes/generalized_option_pricing.html">
-<div class="listing-date">
-Aug 14, 2023
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Hannah de Nobrega
 </div>
-</a>
+<div class="listing-date">
+Aug 14, 2023
 </div>
+</div>
+</div>
+</div>
+</a>
 </div>
 </div>
 <div class="listing-no-matching d-none">

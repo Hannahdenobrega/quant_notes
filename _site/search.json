@@ -4,28 +4,42 @@
     "href": "tools.html",
     "title": "Quant tools",
     "section": "",
-    "text": "Use MT5 Python API to get Financial Data\n\n\n\n\n\n\n\nBlack-Scholes\n\n\nOption Pricing\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nAug 14, 2023\n\n\nHannah de Nobrega\n\n\n\n\n\n\nNo matching items"
+    "text": "Use MT5 Python API to get Financial Data\n\n\n\n\n\n\n\nFree financial data\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nAug 24, 2023\n\n\nHannah de Nobrega\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "notes.html",
     "href": "notes.html",
     "title": "Quant Notes",
     "section": "",
-    "text": "Path shadowing Monte-Carlo\n\n\n\n\n\n\n\nMonte-Carlo\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nAug 16, 2023\n\n\nHannah de Nobrega\n\n\n\n\n\n\n  \n\n\n\n\nGeneralized option pricing\n\n\n\n\n\n\n\nBlack-Scholes\n\n\nOption Pricing\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nAug 15, 2023\n\n\nHannah de Nobrega\n\n\n\n\n\n\n  \n\n\n\n\nGeneralized option pricing\n\n\n\n\n\n\n\nBlack-Scholes\n\n\nOption Pricing\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nAug 14, 2023\n\n\nHannah de Nobrega\n\n\n\n\n\n\nNo matching items"
+    "text": "Auction theory\n\n\n\nDutch Auction\n\n\n\n\n\n\n\nHannah de Nobrega\n\n\nAug 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nExpected value theory\n\n\n\nExpected value\n\n\n\n\n\n\n\nHannah de Nobrega\n\n\nAug 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nBonds and swaps\n\n\n\nMarket Risk Analysis Vol III\n\n\n\n\n\n\n\nHannah de Nobrega\n\n\nAug 25, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPath shadowing Monte-Carlo\n\n\n\nMonte-Carlo\n\n\nR\n\n\n\n\n\n\n\nHannah de Nobrega\n\n\nAug 16, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMartingales in option pricing\n\n\n\nBlack-Scholes\n\n\nOption Pricing\n\n\nR\n\n\n\n\n\n\n\nHannah de Nobrega\n\n\nAug 15, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nGeneralized option pricing\n\n\n\nBlack-Scholes\n\n\nOption Pricing\n\n\nR\n\n\n\n\n\n\n\nHannah de Nobrega\n\n\nAug 14, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "notes/option_pricing_martingale.html",
     "href": "notes/option_pricing_martingale.html",
-    "title": "Generalized option pricing",
+    "title": "Martingales in option pricing",
     "section": "",
     "text": "Martingale’s\nFinance probability theory: a martingale is a stochastic process that represents the expected value of the future payoff, ceteris paribus, and is equal to the current value of the process. i.e. a martingale represents a process in which there is no inherent bias or predictability in the future outcomes.\nA discrete-time process \\(X_t\\) is a martingale if, for all t, it satisfies the property:\n\\[\nE[X_{t+1}|X_1, X_1,...,X_t] = X_t\n\\]\nThis property essentially says that the expected value of the next time step’s value, ceteris paribus, is equal to the current value.\n\n\nApplication to Option Pricing\nOption pricing is a crucial field in finance, and martingales play a fundamental role in its theoretical foundation. One of the most famous models that uses Martingales for option pricing is the Black-Sholes model. In the BS model, a financial derivative like a European call option can be priced using a risk-neutral valuation approach. This approach assumes that there is a risk-neutral probability measure under which the expected return on the underlying asset is the risk-free rate. This is where the Martingale concept features because, regardless of the future price movements of the underlying asset, the portfolio’s value will follow a fair-game pattern with no predictable bias; ensuring that there are no arbitrage opportunities, and the option can be priced consistently. As such we can construct a portfolio of underlying assets and options in such a way that its’ value evolves as a martingale.\n\n\nMathematical illustration\nConsider a European call option on a non-dividend-paying stock. The stock price follows the geometric Brownian motion:\n\\[\ndS = \\mu dt + \\sigma S dW\n\\]\nwhere:\n\\(S\\) = stock price\n\\(\\mu\\) = drift (expected return) of the stock\n\\(\\sigma\\) = volatility of the stock\n\\(dW\\)= Wiener process (Brownian motion)\nThe option price C can be derived as a combination of the risk-free bond and the underlying stock, such that the portfolio follows a martingale process. This leads to the BS formula:\n\\[\nc = SN(d1) - Ke - rTN(d2) \\\\\n\\]\n\\[\nC = Se^{-q^t}N(d_1) - Ke^{-r^t}N(d_2)\\\\\n\\]\n\\[\nP = Ke^{-r^t}N(-d_2)- Se^{-q^t}N(-d_1)\n\\]\nWhere:\n\\(K\\) = strike price of the option\n\\(r\\) = risk-free rate\n\\(T\\) = time to expiration\nwith a standard normal cumulative distribution function\nThis formula demonstrates the use of Martingale in option pricing, as it ensures the option price is consistent with a fair game where there are no predictable biases in future outcomes.\n\n\nSummary\nMartingales are a powerful concept in finance that ensures fair pricing and the absence of arbitrage opportunities. In option pricing, Martingales are used to create risk-neutral portfolios that follow unbiased, fair-game patterns, leading to the development of models like the BS model for pricing derivatives."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Quant Games",
+    "objectID": "notes/Bonds.html",
+    "href": "notes/Bonds.html",
+    "title": "Bonds and swaps",
     "section": "",
-    "text": "Toy\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Primary market: the issuer raises funds by selling bonds via a dutch auction in the primary market (called debt financing). Between issue and expirary bonds may be traded OTC in the secondary market.\nPrincipal/face value: amount to be repaid to the bond holder at maturity (not the amount invested) - assume face value = 100 when pricing a bond (bond is priced at par)\nCoupon: periodic payments to the bondholder by the issuer until the bond expires\nRedemption value: on expiry of the bond, the the bond holder redeems the bond with the issuer. The redemption value is often, but not always, the same as the face value."
+  },
+  {
+    "objectID": "notes/Bonds.html#categorization-of-bonds",
+    "href": "notes/Bonds.html#categorization-of-bonds",
+    "title": "Bonds and swaps",
+    "section": "Categorization of bonds",
+    "text": "Categorization of bonds\nPlotting the yields of bonds along the maturity term structure will give the yield curve. It is very important that only bonds from the same class of issuer or with the same degree of liquidity are used when plotting the yield curve. The primary yield curve in any domestic capital market is the government bond yield curve, In practice, only bonds from the same government are used to plot the yield curve. Outside the government, bond markets yield curves are plotted for money market instruments, off-balance sheet instruments, in fact virtually all debt market instruments. Therefore it is always important to remember to compare like-for-like when analysing yield curves across markets [@choudhry2019analysing].\n\nissuer\n\nseniour vs juniour bond managers (seniours get paid out first)\ncredit rating (AAA vs junk)\n\ngeography\n\ndomestic (country of domicile of the issuer)\nforeign (issued by a foreign borrower in local currency)\nbearer (issued in the international market in any currency)\n\nmaturity\n\nshort-term: 2-5 years\nmedium-term: 5-15 years\nlong term: &gt;15 years\n\n\n\nMost money market (MM) instruments such as US Treasury bills pay no coupons. They are priced ata a discount to their par value of 100. If they are held until expiry then profit is guaranteed. Eventhough very few bonds pay no coupon it is convenient to work with hypothetical zero-coupon bonds of different maturities and different credit ratings. The yeilds on zero-coupon bonds are used as market interest rates for different credit ratings."
+  },
+  {
+    "objectID": "notes/Bonds.html#characteristics-of-bonds-and-interest-rates",
+    "href": "notes/Bonds.html#characteristics-of-bonds-and-interest-rates",
+    "title": "Bonds and swaps",
+    "section": "Characteristics of bonds and interest rates",
+    "text": "Characteristics of bonds and interest rates\n\nReferences\n{#refs}"
   },
   {
     "objectID": "about.html",
@@ -33,6 +47,13 @@
     "title": "Biography",
     "section": "",
     "text": "My main area of research focus is developing systematic investment solutions in the factor portfolio space. This includes developing portfolio strategies that map factor information into investable solutions - enabling clients to best harvest factor risk premiums in their own portfolios. I am also a Financial Econometrician. I am reading towards a Phd in quantitative finance, and have a Master’s degree in Economics (focus area: financial econometrics) and Honours in Mathematical Economics. I have two years working experience in macroeconometrics, time-series statistics and quantitative finance.\nI am a R user and developer with substantial expertise establishing and maintaining automated coding infrastructure and quantitative investment methods, particularly in the field of factor (smart-beta) investments. I’ve also worked with Latex and R to design bespoke automatic reporting systems, as well as building and maintaining interactive HTML dashboards."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quant Games",
+    "section": "",
+    "text": "Toy\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
     "objectID": "notes/generalized_option_pricing.html",
@@ -45,8 +66,8 @@
     "objectID": "notes/generalized_option_pricing.html#a-general-formula-for-option-pricing",
     "href": "notes/generalized_option_pricing.html#a-general-formula-for-option-pricing",
     "title": "Generalized option pricing",
-    "section": "",
-    "text": "The Black-Scholes formula for option pricing is derived by asserting assumptions related to geometric Brownian motion dynamics, which do not correspond to how assets behave in reality.\nFirstly, is there a general option pricing formula that is generalized enough to relax the assumptions such that the dynamics of the underlying assets follow under any type of dynamic?\nSecondly, will it have certain similarities with the Black-Scholes formula?\nUnder the absence of arbitrage, it is possible to obtain a completely general formula that gives the price, \\(C_{t,T,K}\\), of a call option with the stochastic risk-free rate (\\(r_s\\)) and for any possible dynamics for the underlying asset (Geman et al. 1995, Klenbaner 2005, and Bjork 2019):\n\\[\\begin{aligned}\nC(t,T,K) &= S_t \\mathbb{Q}_S [S_T &gt; K | \\digamma_t] - KP(t,T)\\mathbb{Q}_T[S_T &gt; K | \\digamma_t] \\\\\n\n\\frac{d \\digamma{Q}_T}{d \\digamma{Q}} &= \\frac{S_T}{S_0 e^{\\int_{0}^{T}r_s d_S}} \\\\\n\n\\frac{d \\digamma{Q}_T}{d \\digamma{Q}} &= \\frac{1}{P(0,T) e^{\\int_{0}^{T}r_s d_S}}\n\\end{aligned}\\]\n\n\n\nthe price of a call option will always be the difference of two terms\n\nthe first contains the product of the current price of the underlying (\\(S_t\\)) by the conditional probability under a certain measure of probability (\\(\\mathbb{Q}_S\\)) that the option ends in the money\nthe second shows the product of the strike price (\\(K\\)) by the current price of a zero coupon bond with the same maturity as the option, \\(P(t,T)\\), and by the conditional probability, under another measure \\(\\mathbb{Q}_T\\), that the option ends in the money.\n\n\nAll these terms appear in the Black-Scholes formula, and the only difference lies in the concrete expression of the probabilities.\n\n\n\n\nthe only difference lies in the concrete expression of the probabilities\nThe probability measure \\(\\mathbb{Q}_S\\) has the underlying numeraire\n\\(\\mathbb{Q}_T\\) is the T-forward measure, which has a zero coupon bond with maturity T as numeraire\nboth measures are determined by their Radon-Nikodym derivatives that appear under the expression of the call price"
+    "section": "A general formula for option pricing",
+    "text": "A general formula for option pricing\nThe Black-Scholes formula for option pricing is derived by asserting assumptions related to geometric Brownian motion dynamics, which do not correspond to how assets behave in reality.\nFirstly, is there a general option pricing formula that is generalized enough to relax the assumptions such that the dynamics of the underlying assets follow under any type of dynamic?\nSecondly, will it have certain similarities with the Black-Scholes formula?\nUnder the absence of arbitrage, it is possible to obtain a completely general formula that gives the price, \\(C_{t,T,K}\\), of a call option with the stochastic risk-free rate (\\(r_s\\)) and for any possible dynamics for the underlying asset (Geman et al. 1995, Klenbaner 2005, and Bjork 2019):\n\\[\\begin{aligned}\nC(t,T,K) &= S_t \\mathbb{Q}_S [S_T &gt; K | \\digamma_t] - KP(t,T)\\mathbb{Q}_T[S_T &gt; K | \\digamma_t] \\\\\n\n\\frac{d \\digamma{Q}_T}{d \\digamma{Q}} &= \\frac{S_T}{S_0 e^{\\int_{0}^{T}r_s d_S}} \\\\\n\n\\frac{d \\digamma{Q}_T}{d \\digamma{Q}} &= \\frac{1}{P(0,T) e^{\\int_{0}^{T}r_s d_S}}\n\\end{aligned}\\]\n\nSimilarities to Black-Scholes\n\nthe price of a call option will always be the difference of two terms\n\nthe first contains the product of the current price of the underlying (\\(S_t\\)) by the conditional probability under a certain measure of probability (\\(\\mathbb{Q}_S\\)) that the option ends in the money\nthe second shows the product of the strike price (\\(K\\)) by the current price of a zero coupon bond with the same maturity as the option, \\(P(t,T)\\), and by the conditional probability, under another measure \\(\\mathbb{Q}_T\\), that the option ends in the money.\n\n\nAll these terms appear in the Black-Scholes formula, and the only difference lies in the concrete expression of the probabilities.\n\n\nDifferences from Black-Scholes\n\nthe only difference lies in the concrete expression of the probabilities\nThe probability measure \\(\\mathbb{Q}_S\\) has the underlying numeraire\n\\(\\mathbb{Q}_T\\) is the T-forward measure, which has a zero coupon bond with maturity T as numeraire\nboth measures are determined by their Radon-Nikodym derivatives that appear under the expression of the call price"
   },
   {
     "objectID": "notes/generalized_option_pricing.html#conclusion",
@@ -68,5 +89,47 @@
     "title": "Path shadowing Monte-Carlo",
     "section": "",
     "text": "Faithful models of financial time series are notoriously hard to construct. They must account for a series of “stylized facts” that are highly relevant for risk control and option pricing: fat tails, long memory volatility fluctuations, asymmetries both in returns (past negative returns increase future vol) and in time (past trends, of arbitrary sign, increase vol), etc.\nSimple models fail to capture these effects and, correspondingly, generate poor volatility surfaces. The recent Path Dependent Volatility (PDV) model of\nJulien Guyon\noffers an interesting compromise, with a relatively low number of factors, but still fails at capturing, e.g., the term structure of the kurtosis of returns.\nAnother path is to use wavelets, and the so-called “scattering spectra” which are multi-time scales generalization of mixed moments, that compress the information contained in a time series of length T into (log_2 T)**3 parameters by exploiting the scale invariance properties of price processes (but also of turbulent flows, natural images or fracture surfaces). Yet another possibility would be to use generative AI, in a more black-box and less transparent approach.\nIn any case, once one has devised a good enough generative model of prices, how can it be used to predict, say, future realized volatility and option smiles? The “Path Shadowing Monte-Carlo” method that we developed with\nRudy Morel and Stéphane Mallat offers an intuitive and practical answer, illustrated by the figure below:\n·      Generate a very long synthetic series of price returns\n·      Scan this fictitious long time series in order to find snippets that match (“shadow”) as well as possibly the actual past price series (as seen from today)\n·      Weight these snippets with a decreasing function of the distance between the actual past price path and the synthetic price paths\n·      Use the future returns of these snippets to generate weighted realistic scenarios for actual returns\n·      Compute any observable of interest using a Monte-Carlo method with these weighted paths as inputs\n·      For option pricing, add an appropriate hedging strategy in the computation, as in the “Hedged Monte-Carlo” method that we proposed long ago with\nMarc Potters\n(see Potters, M., Bouchaud, J. P., & Sestovic, D. (2001). Hedged Monte-Carlo: low variance derivative pricing with objective probabilities. Physica A: Statistical Mechanics and its Applications, 289(3-4), 517-525.)\nThe results, as applied to the S&P 500, are quite cool – for full details, see the paper above, that I am really happy with. In particular, we find that our Scattering Spectra model outperforms the current version of the PDV model for realized volatility predictions beyond 7 days and for the term structure of the smile curvature."
+  },
+  {
+    "objectID": "tools/mt5_api.html",
+    "href": "tools/mt5_api.html",
+    "title": "Use MT5 Python API to get Financial Data",
+    "section": "",
+    "text": "from datetime import datetime\nimport matplotlib.pyplot as plt\nimport pandas as pd\nfrom pandas.plotting import register_matplotlib_converters\nregister_matplotlib_converters()\nimport MetaTrader5 as mt5\n\n# login = 123456\n# password = \"xyz\"\n# server = 'ICMarketsSC-Demo'\n\n# mt5.login(login, password, server)\n\n# connect to MetaTrader5\nif not mt5.initialize():\n    print(\"initialize() failed :(\")\n    mt5.shutdown()\n\n# request connection status and parameters\nprint(mt5.terminal_info())\n# get data on MetaTrader5 version\nprint(mt5.version())\n\n\n# request 1000 ticks from EURAUD\neuraud_ticks = mt5.copy_ticks_from(\"EURAUD\", datetime(2020,1,28,13), 1000, mt5.COPY_TICKS_ALL)\n# request ticks from AUDUSD within 2019.04.01 13:00 - 2019.04.02 13:00\naudusd_ticks = mt5.copy_ticks_range(\"AUDUSD\", datetime(2020,1,27,13), datetime(2020,1,28,13), mt5.COPY_TICKS_ALL)\n\n# get bars from different symbols in a number of ways\neurusd_rates = mt5.copy_rates_from(\"EURUSD\", mt5.TIMEFRAME_M1, datetime(2020,1,28,13), 1000)\neurgbp_rates = mt5.copy_rates_from_pos(\"EURGBP\", mt5.TIMEFRAME_M1, 0, 1000)\neurcad_rates = mt5.copy_rates_range(\"EURCAD\", mt5.TIMEFRAME_M1, datetime(2020,1,27,13), datetime(2020,1,28,13))\n\n# Shutdown connection to MetaTrader5\nmt5.shutdown()\n\n# Data\n# print('euraud_ticks(', len(euraud_ticks), ')')\n# for val in euraud_ticks[:10]: print(val)\n \n# print('audusd_ticks(', len(audusd_ticks), ')')\n# for val in audusd_ticks[:10]: print(val)\n \n# print('eurusd_rates(', len(eurusd_rates), ')')\n# for val in eurusd_rates[:10]: print(val)\n \n# print('eurgbp_rates(', len(eurgbp_rates), ')')\n# for val in eurgbp_rates[:10]: print(val)\n \n# print('eurcad_rates(', len(eurcad_rates), ')')\n# for val in eurcad_rates[:10]: print(val)\n\ninitialize() failed :(\nNone\n(0, 0, '')\n\n\nTrue"
+  },
+  {
+    "objectID": "notes/dutch_action.html",
+    "href": "notes/dutch_action.html",
+    "title": "Auction theory",
+    "section": "",
+    "text": "In a Dutch auction, an item is offered at a set maximum price, which is incrementally lowered until a bid is made. Whoever places the first bid wins the auction, provided the bid is above the auction’s reserve price.\nThe term “Dutch auction” stems from the auction style used in 17th century Holland’s tulip markets. The bulbs were wildly popular, and the marketplace for them had been chaotic. The exchange decided that the best way to sell the tulip bulbs was to do it quickly in as few bids as possible—while still getting the best price possible."
+  },
+  {
+    "objectID": "notes/dutch_action.html#applications",
+    "href": "notes/dutch_action.html#applications",
+    "title": "Auction theory",
+    "section": "Applications:",
+    "text": "Applications:\n\nInitial Publoc Offerings (IPOs)\nInvestors enter their bids for the number of shares they want to buy at the price they want to buy them. Once all the bids are submitted, the allotted placement is assigned to the bidders from the highest bids down, until the alloted shares are assigned. The price that each bidder pays is based on the lowest price of all the allotted bidders (the last successful bid).\n\n\nUS Treasurie securities sale\nTo help finance the country’s debt the U.S. Treasury uses a Dutch auction to sell its securities.Prospective investors submit bids electronically through TreasuryDirect or the Treasury Automated Auction Processing System (TAAPS), which accepts bids up to 30 days in advance of an auction. The bids with the lowest yield will be accepted first, since the issuer will prefer to pay lower yields to its bond investors."
+  },
+  {
+    "objectID": "notes/dutch_action.html#optimal-bid-strategy",
+    "href": "notes/dutch_action.html#optimal-bid-strategy",
+    "title": "Auction theory",
+    "section": "Optimal bid strategy",
+    "text": "Optimal bid strategy\nTo gain certainty in the context of a Dutch auction, a winning bid must be placed earlier and at a higher price. Ample evidence suggests people prefer certainty over uncertainty in a variety of conditions (e.g. Kahneman and Tversky 1979, 2013)"
+  },
+  {
+    "objectID": "notes/dutch_action.html#rules-of-the-game",
+    "href": "notes/dutch_action.html#rules-of-the-game",
+    "title": "Auction theory",
+    "section": "Rules of the game",
+    "text": "Rules of the game\nAuctioneer starts with a high price and brings it down, the first person to raise hand wins and pays that price – Note: the process by construction reveals no information about the other bidders’ valuation – Decision: at what price (given valuation) should I raise my hand? • I have to make the decision without knowing anything about what the others might bid • I know I will pay the price at which I bid\n• So: – the bidder who chooses the highest price wins the auction – the seller receives the highest price chosen by bidders – no other information is ever revealed\nDutch auctions enhance the democratization of IPOs, and increase price fairness and transparancy. Thus, allows small investors to take part in the offering and ensuring that the market arrives at a reasonable estimate of the firm’s value and that the initial “pop” that accompanies the listing of a hot company is muted.\nHowever, there is less price control and more potential price volatility associated with Dutch auctions. Companies performing improper due-dilligence may bid which could skew the “fair-value” of the IPO which is derived from the auction. Furthermore, a stock’s price may crash immediately after listing when investors, who had bid a higher price earlier, realize that they may have miscalculated or overbid. Such investors may try to sell the stock to get out of their holding, leading to a crash in the share’s price."
+  },
+  {
+    "objectID": "notes/dutch_action.html#a-quick-simulation",
+    "href": "notes/dutch_action.html#a-quick-simulation",
+    "title": "Auction theory",
+    "section": "A quick simulation",
+    "text": "A quick simulation"
   }
 ]

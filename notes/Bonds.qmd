@@ -1,0 +1,39 @@
+---
+title: "Bonds and swaps"
+author: "Hannah de Nobrega"
+date: "2023-08-25"
+categories: [Market Risk Analysis Vol III] 
+---
+
+![](../imgs/bonds.png)
+
+#### Nomenclature
+- **Primary market**: the issuer raises funds by selling bonds via a _dutch auction_ in the _primary market_ (called _debt financing_). Between issue and expirary bonds may be traded OTC in the _secondary market_. 
+- **Principal/face value**: amount to be repaid to the bond holder at maturity (not the amount invested)
+        - assume face value = 100 when pricing a bond (bond is priced at _par_)
+- **Coupon**: periodic payments to the bondholder by the issuer until the bond expires
+- **Redemption value**: on expiry of the bond, the the bond holder redeems the bond with the issuer. The redemption value is often, but not always, the same as the face value.  
+
+## Categorization of bonds 
+Plotting the yields of bonds along the maturity term structure will give the yield curve. It is very important that only bonds from the same class of issuer or with the same degree of liquidity are used when plotting the yield curve. The primary yield curve in any domestic capital market is the government bond yield curve, In practice, only bonds from the same government are used to plot the yield curve. Outside the government, bond markets yield curves are plotted for money market instruments, off-balance sheet instruments, in fact virtually all debt market instruments. Therefore it is always important to remember to compare like-for-like when analysing yield curves across markets [@choudhry2019analysing]. 
+
+- issuer
+    - seniour vs juniour bond managers (seniours get paid out first)
+    - credit rating (AAA vs junk)
+- geography
+    - domestic (country of domicile of the issuer)
+    - foreign (issued by a foreign borrower in local currency)
+    - bearer (issued in the international market in any currency)
+- maturity
+    - short-term: 2-5 years
+    - medium-term: 5-15 years
+    - long term: >15 years 
+
+> Most money market (MM) instruments such as US Treasury bills pay no coupons. They are priced ata a discount to their par value of 100. If they are held until expiry then profit is guaranteed. Eventhough very few bonds pay no coupon it is convenient to work with hypothetical zero-coupon bonds of different maturities and different credit ratings. The yeilds on zero-coupon bonds are used as _market interest rates_ for different credit ratings.
+
+## Characteristics of bonds and interest rates
+
+
+### References
+
+{#refs}

@@ -8,6 +8,9 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/dutch_action.html",
+      "/notes/expected_value.html",
+      "/notes/Bonds.html",
       "/notes/path_shadowing_mc.html",
       "/notes/option_pricing_martingale.html",
       "/notes/generalized_option_pricing.html"
